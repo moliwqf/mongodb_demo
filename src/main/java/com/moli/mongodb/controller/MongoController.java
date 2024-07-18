@@ -2,6 +2,9 @@ package com.moli.mongodb.controller;
 
 import com.moli.mongodb.common.ReturnData;
 import com.moli.mongodb.entity.PageParam;
+import com.moli.mongodb.entity.PageVO;
+import com.moli.mongodb.entity.first.Student;
+import com.moli.mongodb.entity.second.Teacher;
 import com.moli.mongodb.service.MongoService;
 import org.springframework.web.bind.annotation.*;
 
