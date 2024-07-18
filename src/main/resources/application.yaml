@@ -1,0 +1,4 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://admin:Terrissmongodb03@101.132.35.175:27018/mongo_demo?authSource=admin
