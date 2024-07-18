@@ -1,4 +1,4 @@
 spring:
   data:
     mongodb:
-      uri: mongodb://admin:Terrissmongodb03@101.132.35.175:27018/mongo_demo?authSource=admin
+      uri: mongodb://用户名:密码3@主机:端口/mongo_demo?authSource=admin
