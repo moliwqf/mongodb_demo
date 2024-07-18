@@ -2,7 +2,9 @@ package com.moli.mongodb.service;
 
 import com.moli.mongodb.entity.PageParam;
 import com.moli.mongodb.entity.PageVO;
-import com.moli.mongodb.entity.Student;
+import com.moli.mongodb.entity.StudentCountVo;
+import com.moli.mongodb.entity.first.Student;
+import com.moli.mongodb.entity.second.Teacher;
 
 import java.util.List;
 
@@ -26,4 +28,10 @@ public interface MongoService {
     List<Student> getAllTimerDesc();
 
     PageVO<Student> pageStudentList(PageParam pageParam, String username);
+
+    boolean insertTeacher(Teacher teacher);
+
+    StudentCountVo countStudentByMonth(int month);
+
+    Object moreToOne();
 }

@@ -3,7 +3,8 @@ package com.moli.mongodb.controller;
 import com.moli.mongodb.common.ReturnData;
 import com.moli.mongodb.entity.PageParam;
 import com.moli.mongodb.entity.PageVO;
-import com.moli.mongodb.entity.Student;
+import com.moli.mongodb.entity.first.Student;
+import com.moli.mongodb.entity.second.Teacher;
 import com.moli.mongodb.service.MongoService;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,6 +25,15 @@ public class MongoController {
     @PostMapping("insertData")
     public ReturnData<?> insertData(@RequestBody Student student) {
         boolean success = mongoService.insertData(student);
+        if (success) {
+            return ReturnData.ok();
+        }
+        return ReturnData.fail();
+    }
+
+    @PostMapping("insertTeacher")
+    public ReturnData<?> insertTeacher(@RequestBody Teacher teacher) {
+        boolean success = mongoService.insertTeacher(teacher);
         if (success) {
             return ReturnData.ok();
         }
@@ -70,5 +80,15 @@ public class MongoController {
     public ReturnData<?> pageStudentList(PageParam pageParam, String username) {
         PageVO<Student> studentList = mongoService.pageStudentList(pageParam, username);
         return ReturnData.ok(studentList);
+    }
+
+    @GetMapping("countStudentByMonth")
+    public ReturnData<?> countStudentByMonth(Integer month) {
+        return ReturnData.ok(mongoService.countStudentByMonth(month));
+    }
+
+    @GetMapping("moreToOne")
+    public ReturnData<?> moreToOne() {
+        return ReturnData.ok(mongoService.moreToOne());
     }
 }

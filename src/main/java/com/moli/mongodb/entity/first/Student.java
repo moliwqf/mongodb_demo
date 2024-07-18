@@ -1,4 +1,4 @@
-package com.moli.mongodb.entity;
+package com.moli.mongodb.entity.first;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;

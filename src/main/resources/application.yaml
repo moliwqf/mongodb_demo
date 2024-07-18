@@ -1,4 +1,9 @@
 spring:
   data:
     mongodb:
-      uri: mongodb://用户名:密码3@主机:端口/mongo_demo?authSource=admin
+      first:
+        uri: mongodb://用户名:密码@ip:port/mongo_demo?authSource=admin
+      second:
+        uri: mongodb://ip:port/mongo_demo
+      third:
+        uri: mongodb://ip:port/mongo_demo
